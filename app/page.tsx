@@ -5,7 +5,7 @@ import { Button } from "@nextui-org/button";
 import useSound from "use-sound";
 
 export default function Home() {
-  const [play] = useSound("/bg-music/first.mp3", {
+  const [play] = useSound("portfolio/bg-music/first.mp3", {
     volume: 0.03,
     interrupt: true,
   });
