@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {basePath: '/my-portfolio',}
+const nextConfig = {
+    basePath: '/portfolio',
+    reactStrictMode: true,
+    swcMinify: true,
+}
 
 module.exports = nextConfig
