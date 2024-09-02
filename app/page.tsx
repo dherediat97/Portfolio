@@ -1,11 +1,14 @@
 "use client";
 
-import { fontSans } from "@/config/fonts";
+import { FaHandsHelping } from "react-icons/fa";
+import { fontMono } from "@/config/fonts";
 import { Button } from "@nextui-org/button";
+import { useState } from "react";
 import useSound from "use-sound";
+import Modal from "./components/modal";
 
 export default function Home() {
-  const [play] = useSound("Portfolio/bg-music/first.mp3", {
+  const [play] = useSound("/bg-music/first.mp3", {
     volume: 0.03,
     interrupt: true,
   });
@@ -14,30 +17,50 @@ export default function Home() {
     play();
   };
 
+  const [isModalOpen, showModal] = useState(false);
+
   return (
-    <main className="container mx-auto max-w-7xl px-6 flex-grow">
-      <div
-        className={"grid place-content-around place-items-center grid-flow-row"}
-      >
-        <div className={"text-4xl pt-6"}>
+    <main className="">
+      <div className={"pt-12"}>
+        <div
+          className={`text-center place-content-center text-5xl ${fontMono.className}`}
+        >
           <h1>WELCOME TO MY PORTFOLIO!!</h1>
         </div>
-        <div className={"pt-6"}>
+        <div className={"text-center pt-12"}>
           <Button
             onClick={handleClick}
             href={"/my-experiencies"}
             className={
-              "rounded-full bg-gradient-to-r  from-foreground-500 to-cyan-500 text-2xl"
+              "rounded-full bg-gradient-to-r from-foreground-500 to-cyan-500 text-2xl"
             }
           >
-            <p className={"font-sans font-medium text-xl"}>
+            <p
+              className={"text-center place-content-center text-white text-xl"}
+            >
               Start my Portfolio
             </p>
           </Button>
         </div>
       </div>
-      <footer className="w-full flex items-center justify-center py-3">
-        <h5 className={`text-lg ${fontSans.className}`}>Made with love ❤️</h5>
+      <footer className="pt-12">
+        <FaHandsHelping
+          className={"text-end sticky text-lg"}
+          onClick={() => showModal(true)}
+        />
+        <h5 className={"text-center sticky text-lg font-sans"}>
+          Made with love ❤️
+        </h5>
+        {isModalOpen && (
+          <Modal
+            children={<></>}
+            onClose={() => showModal(false)}
+            title={"Thanks to the supported"}
+          >
+            Atributtion Royalty Free Music from Tunetank.com Track: Star Force
+            by VictorWayne https://tunetank.com/track/5918-star-force/
+          </Modal>
+        )}
       </footer>
     </main>
   );
