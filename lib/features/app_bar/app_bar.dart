@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/app/app_theme.dart';
 import 'package:portfolio/widgets/gradient_text.dart';
 
 class MyAppBar extends StatelessWidget {
@@ -13,55 +14,78 @@ class MyAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
-      appBar: AppBar(
-        flexibleSpace: const Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                GradientWidget(
-                  widget: Icon(
-                    Icons.code,
-                    semanticLabel: 'code icon',
-                  ),
-                  gradient: LinearGradient(
-                    colors: [Colors.pink, Colors.purple],
-                  ),
-                ),
-                Text(
-                  'My Projects',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontFamily: 'Atma',
-                  ),
-                  semanticsLabel: 'My Projects Section',
-                ),
-                Text(
-                  'About Me',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontFamily: 'Atma',
-                  ),
-                  semanticsLabel: 'About Me Section',
-                ),
-                Text(
-                  'Contact',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontFamily: 'Atma',
-                  ),
-                  semanticsLabel: 'Contact Section',
-                ),
-              ],
+      body: NestedScrollView(
+        headerSliverBuilder: (context, innerBoxIsScrolled) {
+          return [
+            SliverAppBar(
+              pinned: false,
+              floating: innerBoxIsScrolled,
+              expandedHeight: 75,
+              forceElevated: innerBoxIsScrolled,
+              backgroundColor: Theme.of(context).colorScheme.primary,
+              flexibleSpace: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 12),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GradientWidget(
+                          widget: Icon(
+                            Icons.code,
+                            size: 48,
+                            semanticLabel: 'code icon',
+                          ),
+                          gradient: AppTheme.defaultGradient,
+                        ),
+                        SizedBox(
+                          width: 50,
+                        ),
+                        Text(
+                          'My Projects',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Montserrat',
+                          ),
+                          semanticsLabel: 'My Projects Section',
+                        ),
+                        Spacer(),
+                        Text(
+                          'About Me',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Montserrat',
+                          ),
+                          semanticsLabel: 'About Me Section',
+                        ),
+                        Spacer(),
+                        Text(
+                          'Contact',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Montserrat',
+                          ),
+                          semanticsLabel: 'Contact Section',
+                        ),
+                        SizedBox(
+                          width: 50,
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             )
-          ],
-        ),
-        backgroundColor: Theme.of(context).colorScheme.primary,
+          ];
+        },
+        body: child,
       ),
-      body: child,
     );
   }
 }
