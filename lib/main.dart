@@ -53,15 +53,15 @@ class _MyHomePageState extends State<HomePage> {
                   ),
                 ),
                 Text(
-                  "My Projects",
+                  'My Projects',
                   semanticsLabel: 'My Projects Section',
                 ),
                 Text(
-                  "About Me",
+                  'About Me',
                   semanticsLabel: 'About Me Section',
                 ),
                 Text(
-                  "Contact",
+                  'Contact',
                   semanticsLabel: 'Contact Section',
                 ),
               ],
