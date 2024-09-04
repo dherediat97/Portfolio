@@ -1,0 +1,23 @@
+name: My Portfolio Web
+
+on:
+  push:
+   branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+        - uses: actions/checkout@v4
+        - uses: subosito/flutter-action@v2
+          with:
+            channel: 'stable'
+        - run: flutter clean
+        - run: flutter pub get
+        - uses: bluefireteam/flutter-gh-pages@v8
+          with:
+            baseHref: /MyPortfolio/
+            targetBranch: gh-pages
+            webRenderer: html
