@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider:
 
 dev_dependencies:
   flutter_test:
@@ -18,6 +19,15 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - bg_music/first.mp3
+    - assets/bg_music/first.mp3
+  fonts:
+    - family: Atma
+      fonts:
+        - asset: assets/fonts/Atma-Regular.ttf
+        - asset: assets/fonts/Atma-Light.ttf
+        - asset: assets/fonts/Atma-Medium.ttf
+        - asset: assets/fonts/Atma-Regular.ttf
+        - asset: assets/fonts/Atma-SemiBold.ttf
+        - asset: assets/fonts/Atma-Bold.ttf
 
  
