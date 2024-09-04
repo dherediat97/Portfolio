@@ -1,4 +1,4 @@
-name: My Portfolio Web
+name: Portfolio on Web
 
 on:
   push:
@@ -18,6 +18,6 @@ jobs:
         - run: flutter pub get
         - uses: bluefireteam/flutter-gh-pages@v8
           with:
-            baseHref: /MyPortfolio/
+            baseHref: /Portfolio/
             targetBranch: gh-pages
             webRenderer: html
