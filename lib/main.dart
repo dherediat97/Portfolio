@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/widgets/gradient_text.dart';
+import 'package:portfolio/features/app_bar/app_bar.dart';
+import 'package:portfolio/features/home/home_page.dart';
+import 'package:portfolio/model/portfolio_model.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const PortfolioApp());
@@ -10,69 +13,35 @@ class PortfolioApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'My Portfolio',
-      theme: ThemeData(
-        colorScheme: const ColorScheme.dark(primary: Colors.black87),
-        useMaterial3: true,
+    return ChangeNotifierProvider(
+      create: (context) => PortfolioModel(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'My Portfolio',
+        theme: ThemeData(
+          colorScheme: const ColorScheme.dark(primary: Colors.black87),
+          useMaterial3: true,
+        ),
+        home: const StartPage(),
       ),
-      home: const HomePage(),
     );
   }
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class StartPage extends StatefulWidget {
+  const StartPage({super.key});
 
   @override
-  State<HomePage> createState() => _MyHomePageState();
+  State<StartPage> createState() => _StartPageState();
 }
 
-class _MyHomePageState extends State<HomePage> {
+class _StartPageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.primary,
-      appBar: AppBar(
-        flexibleSpace: const Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                GradientWidget(
-                  widget: Icon(
-                    Icons.code,
-                    semanticLabel: 'code icon',
-                  ),
-                  gradient: LinearGradient(
-                    colors: [Colors.pink, Colors.purple],
-                  ),
-                ),
-                Text(
-                  'My Projects',
-                  semanticsLabel: 'My Projects Section',
-                ),
-                Text(
-                  'About Me',
-                  semanticsLabel: 'About Me Section',
-                ),
-                Text(
-                  'Contact',
-                  semanticsLabel: 'Contact Section',
-                ),
-              ],
-            )
-          ],
-        ),
-        backgroundColor: Theme.of(context).colorScheme.primary,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Container(),
+    return const MyAppBar(
+      child: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: HomePage(),
       ),
     );
   }
