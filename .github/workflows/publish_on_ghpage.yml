@@ -32,6 +32,9 @@ jobs:
             pub-cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # change this to specify the cache path
         - run: flutter clean
         - run: flutter pub get
+        - run: flutter build web --release
+          with:
+            path: ./out
 
   deploy:
     environment:
