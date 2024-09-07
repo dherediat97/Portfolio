@@ -47,7 +47,7 @@ class MyAppBar extends StatelessWidget {
                         Text(
                           'My Projects',
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 16,
                             fontWeight: FontWeight.bold,
                             fontFamily: 'Montserrat',
                           ),
@@ -57,7 +57,7 @@ class MyAppBar extends StatelessWidget {
                         Text(
                           'About Me',
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 16,
                             fontWeight: FontWeight.bold,
                             fontFamily: 'Montserrat',
                           ),
@@ -67,14 +67,14 @@ class MyAppBar extends StatelessWidget {
                         Text(
                           'Contact',
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 16,
                             fontWeight: FontWeight.bold,
                             fontFamily: 'Montserrat',
                           ),
                           semanticsLabel: 'Contact Section',
                         ),
                         SizedBox(
-                          width: 50,
+                          width: 100,
                         ),
                       ],
                     ),
