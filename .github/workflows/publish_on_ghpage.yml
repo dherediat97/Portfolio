@@ -11,31 +11,26 @@ jobs:
 
     steps:
         - uses: actions/checkout@v4
-        - name: Set up Flutter
-          uses: subosito/flutter-action@v2
+        - uses: subosito/flutter-action@v2
           with:
             channel: stable
             cache: true
-            #optional parameters
-            cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:" #to force refresh cache
-            cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # to specify the cache path
-            pub-cache-key: "flutter-pub:os:-:channel:-:version:-:arch:-:hash:" #to force refresh cache of dart pub get dependencies
-            pub-cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # to specify the cache path
+            # optional parameters follow
+            cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:" # optional, change this to force refresh cache
+            cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # optional, change this to specify the cache path
+            pub-cache-key: "flutter-pub:os:-:channel:-:version:-:arch:-:hash:" # optional, change this to force refresh cache of dart pub get dependencies
+            pub-cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # optional, change this to specify the cache path
         - run: flutter clean
         - run: flutter pub get
-        - uses: flutter build web --release
-        - name: Upload artifact
-          uses: actions/upload-pages-artifact@v3
-          with:
-            path: ./out
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+deploy:
+  environment:
+    name: github-pages
+    url: ${{ steps.deployment.outputs.page_url }}
+  runs-on: ubuntu-latest
+  needs: build
+  steps:
+    - uses: bluefireteam/flutter-gh-pages@v8
+      with:
+        baseHref: /Portfolio/
+        targetBranch: gh-page
