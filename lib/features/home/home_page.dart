@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/app/app_theme.dart';
-import 'package:portfolio/widgets/gradient_text.dart';
+import 'package:portfolio/widgets/gradient_text_widget.dart';
 import 'package:typewritertext/typewritertext.dart';
 
 class HomePage extends StatefulWidget {

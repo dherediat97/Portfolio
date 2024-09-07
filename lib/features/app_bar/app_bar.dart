@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/app/app_theme.dart';
-import 'package:portfolio/widgets/gradient_text.dart';
+import 'package:portfolio/widgets/gradient_text_widget.dart';
 
 class MyAppBar extends StatelessWidget {
   const MyAppBar({
