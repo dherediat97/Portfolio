@@ -35,10 +35,8 @@ flutter:
         - asset: assets/fonts/Atma-Bold.ttf
     - family: Montserrat
       fonts:
-        - asset: assets/fonts/Montserrat-Italic.ttf
         - asset: assets/fonts/Montserrat-Regular.ttf
     - family: Cabin
       fonts:
-        - asset: assets/fonts/Cabin-Italic.ttf
         - asset: assets/fonts/Cabin-Regular.ttf
  
