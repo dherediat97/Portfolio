@@ -4,7 +4,7 @@
     * @returns {Promise} A Promise that resolves after the delay.
     */
     function addDelay() {
-        return new Promise((resolve) => setTimeout(resolve, 200));
+        return new Promise((resolve) => setTimeout(resolve, 500));
     }
 
     // Get the progress and progressBar elements from the DOM
