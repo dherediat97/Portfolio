@@ -33,14 +33,14 @@ jobs:
         - run: flutter clean
         - run: flutter pub get
 
-deploy:
-  environment:
-    name: github-pages
-    url: ${{ steps.deployment.outputs.page_url }}
-  runs-on: ubuntu-latest
-  needs: build
-  steps:
-    - uses: bluefireteam/flutter-gh-pages@v8
-      with:
-        baseHref: /Portfolio/
-        targetBranch: gh-page
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: bluefireteam/flutter-gh-pages@v8
+        with:
+          baseHref: /Portfolio/
+          targetBranch: gh-page
