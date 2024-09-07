@@ -9,7 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  provider:
+  flutter_localizations:
+    sdk: flutter
+  intl: any
   typewritertext: ^3.0.8
 
 dev_dependencies:
@@ -19,6 +21,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
+  
   assets:
     - assets/bg_music/first.mp3
   fonts: 
