@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   bool isAnimationFinished = false;
   final valueController = TypeWriterController.fromValue(
     TypeWriterValue([
-      'Android Native Mobile Developer',
+      'Android Developer',
       'Flutter Developer',
       'Ionic Developer',
       'Mobile Application Developer',
@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
       'Technology Entusiast',
     ]),
     repeat: false,
-    duration: const Duration(milliseconds: 100),
+    duration: const Duration(milliseconds: 200),
   );
 
   final streamController =
@@ -36,9 +36,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
               "I'm ",
@@ -49,12 +51,15 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             if (isAnimationFinished)
-              const Text(
-                'David Heredia',
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Cabin',
+              const GradientWidget(
+                gradient: AppTheme.defaultGradient,
+                widget: Text(
+                  'David Heredia',
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Cabin',
+                  ),
                 ),
               ),
           ],
@@ -72,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                 gradient: AppTheme.defaultGradient,
                 widget: Text(
                   value.text,
-                  style: const TextStyle(fontSize: 30, fontFamily: 'Tiny'),
+                  style: const TextStyle(fontSize: 50, fontFamily: 'Tiny'),
                 ),
               );
             },
