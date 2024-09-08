@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
       'Technology Entusiast',
     ]),
     repeat: false,
-    duration: const Duration(milliseconds: 200),
+    duration: const Duration(milliseconds: 400),
   );
 
   final streamController =
@@ -34,55 +34,59 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Text(
-              "I'm ",
-              style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Cabin',
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                "I'm ",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Cabin',
+                ),
               ),
-            ),
-            if (isAnimationFinished)
-              const GradientWidget(
-                gradient: AppTheme.defaultGradient,
-                widget: Text(
-                  'David Heredia',
-                  style: TextStyle(
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Cabin',
+              if (isAnimationFinished)
+                const GradientWidget(
+                  gradient: AppTheme.defaultGradient,
+                  widget: Text(
+                    'David Heredia',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Cabin',
+                    ),
                   ),
                 ),
-              ),
-          ],
-        ),
-        if (!isAnimationFinished)
-          TypeWriter(
-            controller: valueController,
-            onFinished: (value) {
-              setState(() {
-                isAnimationFinished = true;
-              });
-            },
-            builder: (context, value) {
-              return GradientWidget(
-                gradient: AppTheme.defaultGradient,
-                widget: Text(
-                  value.text,
-                  style: const TextStyle(fontSize: 50, fontFamily: 'Tiny'),
-                ),
-              );
-            },
+            ],
           ),
-      ],
+          if (!isAnimationFinished)
+            TypeWriter(
+              controller: valueController,
+              onFinished: (value) {
+                setState(() {
+                  isAnimationFinished = true;
+                });
+              },
+              builder: (context, value) {
+                return GradientWidget(
+                  gradient: AppTheme.defaultGradient,
+                  widget: Text(
+                    value.text,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontSize: 50, fontFamily: 'Tiny'),
+                  ),
+                );
+              },
+            ),
+        ],
+      ),
     );
   }
 }
