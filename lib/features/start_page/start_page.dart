@@ -14,7 +14,7 @@ class _StartPageState extends State<StartPage> {
   Widget build(BuildContext context) {
     return const MyAppBar(
       child: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(8.0),
         child: HomePage(),
       ),
     );
