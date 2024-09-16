@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants/context_extensions.dart';
+import 'package:portfolio/app/constants/context_extensions.dart';
 import 'package:portfolio/features/app_bar/app_bar.dart';
 import 'package:portfolio/features/home/home_page.dart';
 import 'package:portfolio/features/my_projects/my_projects_page.dart';

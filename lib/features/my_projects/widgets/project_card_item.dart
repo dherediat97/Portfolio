@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/app/app_theme.dart';
+import 'package:portfolio/app/constants/app_assets.dart';
+import 'package:portfolio/app/constants/app_theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProjectCardItem extends StatelessWidget {
@@ -51,7 +52,7 @@ class ProjectCardItem extends StatelessWidget {
               children: [
                 if (projectMedia != null)
                   Image.asset(
-                    'images/$projectMedia',
+                    '${AppAssets.imagesFolder}/$projectMedia',
                     height: 600,
                     width: double.infinity,
                     fit: BoxFit.fitHeight,
