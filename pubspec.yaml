@@ -26,7 +26,7 @@ flutter:
   
   assets:
     - assets/bg_music/first.mp3
-    - assets/projects/images
+    - assets/projects/images/
   fonts: 
     - family: Tiny
       fonts:
