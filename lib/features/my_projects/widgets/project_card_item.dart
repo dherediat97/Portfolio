@@ -51,7 +51,7 @@ class ProjectCardItem extends StatelessWidget {
               children: [
                 if (projectMedia != null)
                   Image.asset(
-                    'projects/images/$projectMedia',
+                    'images/$projectMedia',
                     height: 600,
                     width: double.infinity,
                     fit: BoxFit.fitHeight,
