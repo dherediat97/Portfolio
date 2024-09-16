@@ -26,7 +26,9 @@ flutter:
   
   assets:
     - assets/bg_music/first.mp3
-    - assets/projects/images/
+    - assets/projects/images/adopt_a_pet.jpg
+    - assets/projects/images/filmflu.png
+    - assets/projects/images/rick_morty.png
   fonts: 
     - family: Tiny
       fonts:
