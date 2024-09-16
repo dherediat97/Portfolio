@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/app/app_theme.dart';
+import 'package:portfolio/app/constants/app_theme.dart';
 import 'package:portfolio/l10n/localizations/app_localizations.dart';
 import 'package:portfolio/features/start_page/start_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const PortfolioApp());
 }
 
