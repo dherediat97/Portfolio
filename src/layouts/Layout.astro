@@ -3,7 +3,7 @@
 // https://docs.astro.build/en/core-concepts/layouts/
 
 // Component Imports
-import MainHead from "../components/MainHead.astro";
+import Header from "../components/Header.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 
@@ -17,7 +17,7 @@ const { title, description } = Astro.props;
 
 <html lang="en">
   <head>
-    <MainHead title={title} description={description} />
+    <Header title={title} description={description} />
   </head>
   <body>
     <div class="stack backgrounds">
@@ -37,7 +37,6 @@ const { title, description } = Astro.props;
       :root {
         --_placeholder-bg: linear-gradient(transparent, transparent);
         --bg-image-main: url("/assets/backgrounds/bg-main-light-800w.jpg");
-        --bg-image-main-curves: url("/assets/backgrounds/bg-main-light.svg");
         --bg-image-subtle-1: var(--_placeholder-bg);
         --bg-image-subtle-2: var(--_placeholder-bg);
         --bg-image-footer: var(--_placeholder-bg);
