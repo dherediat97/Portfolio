@@ -10,17 +10,30 @@ import ContactCTA from "../components/ContactCTA.astro";
       <section>
         <h2 class="section-title">Background</h2>
         <div class="content">
-          <p></p>
-          <p></p>
-          <p></p>
+          <a>Flutter Developer | Accenture | April 2024 - June 2024</a>
+          <a>
+            Android Developer | Internet of Things | October 2019 - July 2023
+          </a>
+          <a>
+            FullStack Developer | What You Look For S.L | July 2017 - September
+            2019
+          </a>
+          <a>
+            Intern Application Developer | What You Look For S.L | March 2017 -
+            Jun 2017
+          </a>
         </div>
       </section>
       <section>
         <h2 class="section-title">Education</h2>
         <div class="content">
-          <p>Curso .NET Udemy</p>
-          <p>CFGS DAM I.E.S Franciscos de los Ríos</p>
-          <p>CFGM SMR I.E.S Franciscos de los Ríos</p>
+          <a>ReactJS Udemy Course</a>
+          <a
+            href="https://www.udemy.com/certificate/UC-cc949cd6-ac57-4ea5-b7d0-4e32c2db2068/"
+            >.NET Udemy Course</a
+          >
+          <a>CFGS DAM I.E.S Francisco de los Ríos (2015-2017)</a>
+          <a>CFGM SMR I.E.S Francisco de los Ríos (2013-2015)</a>
         </div>
       </section>
       <section>
@@ -39,6 +52,14 @@ import ContactCTA from "../components/ContactCTA.astro";
           <p>Python</p>
           <p>LaTeX</p>
           <p>Objetive C</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Languages</h2>
+        <div class="content">
+          <p>Native Spanish</p>
+          <p>English Advanced</p>
         </div>
       </section>
     </main>
@@ -77,6 +98,8 @@ import ContactCTA from "../components/ContactCTA.astro";
     }
 
     .content :global(a) {
+      color: var(--gray-0);
+      display: block;
       text-decoration: 1px solid underline transparent;
       text-underline-offset: 0.25em;
       transition: text-decoration-color var(--theme-transition);
