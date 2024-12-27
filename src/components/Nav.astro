@@ -2,7 +2,6 @@
 import Icon from "./Icon.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 import type { iconPaths } from "./IconPaths";
-import { fade } from "astro:transitions";
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -33,7 +32,7 @@ const isCurrentPage = (href: string) => {
 };
 ---
 
-<nav transition:animate={fade({ duration: "4s" })}>
+<nav>
   <div class="menu-header">
     <a href="/" class="site-title">
       <Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" />
