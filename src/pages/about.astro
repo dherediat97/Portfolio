@@ -1,129 +1,150 @@
 ---
 import BaseLayout from "../layouts/Layout.astro";
-
+import SkillsChart from "../components/SkillsChart.astro";
 import ContactCTA from "../components/ContactCTA.astro";
 ---
 
 <BaseLayout title="About | David Heredia" description="About David Heredia">
-  <div class="stack gap-20">
-    <main class="wrapper about">
-      <section>
-        <h2 class="section-title">Background</h2>
-        <div class="content">
-          <a>Flutter Developer | Accenture | April 2024 - June 2024</a>
-          <a>
-            Android Developer | Internet of Things | October 2019 - July 2023
-          </a>
-          <a>
-            FullStack Developer | What You Look For S.L | July 2017 - September
-            2019
-          </a>
-          <a>
-            Intern Application Developer | What You Look For S.L | March 2017 -
-            Jun 2017
-          </a>
-        </div>
-      </section>
-      <section>
-        <h2 class="section-title">Education</h2>
-        <div class="content">
-          <a>ReactJS Udemy Course</a>
-          <a
-            href="https://www.udemy.com/certificate/UC-cc949cd6-ac57-4ea5-b7d0-4e32c2db2068/"
-            >.NET Udemy Course</a
-          >
-          <a>CFGS DAM I.E.S Francisco de los Ríos (2015-2017)</a>
-          <a>CFGM SMR I.E.S Francisco de los Ríos (2013-2015)</a>
-        </div>
-      </section>
-      <section>
-        <h2 class="section-title">Skills</h2>
-        <div class="content">
-          <p>Java</p>
-          <p>Kotlin</p>
-          <p>JetPack Compose</p>
-          <p>Swift</p>
-          <p>Flutter</p>
-          <p>Ionic</p>
-          <p>.NET</p>
-          <p>ReactJS</p>
-          <p>NodeJS</p>
-          <p>HTML5 & CSS3</p>
-          <p>Python</p>
-          <p>LaTeX</p>
-          <p>Objetive C</p>
-        </div>
-      </section>
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					In the sun-drenched city of Córdoba, nestled in Andalusia,
+					my digital journey began seven years ago. While my true
+					passion and expertise lie in native mobile application
+					development, particularly for Android, my initial foray into
+					the web was somewhat accidental. It started with the humble
+					task of tweaking websites built with WordPress. Due to a
+					twist of fate, I found myself working with PHP files, where
+					I was primarily changing existing text and elements, a
+					foundational step that, while not my primary focus, hinted
+					at the power beneath the surface.
+				</div>
+				<div class="content">
+					This initial tinkering sparked an insatiable desire to build
+					from the ground up. Driven by self-learning, I delved into a
+					multitude of technologies, eventually leading me to my core
+					interest: crafting robust and engaging native Android
+					applications. Creating my first functional hybrid mobile
+					application, built personally as a hobby, became a valuable
+					learning experience along the way, a testament to my
+					dedication and expanding skillset.
+				</div>
+				<div class="content">
+					Along this path, a keen eye for efficiency emerged in me. I
+					possessed a knack for identifying the invisible burdens that
+					slowed down digital experiences, whether on the web or
+					within mobile apps. Time and again, I stepped into projects
+					plagued by sluggish performance due to excessive workloads.
+					With methodical precision and a deep understanding of
+					optimization techniques, I consistently achieved remarkable
+					transformations, often reducing application or website load
+					times by an impressive 80%.
+				</div>
+				<div class="content">
+					However, it's in the realm of mobile applications,
+					especially Android, where I truly thrive. There's a
+					particular joy in witnessing a project gradually take the
+					exact shape I initially envisioned. The ideas that once
+					existed purely in my mind become tangible realities on a
+					screen, and seeing those past thoughts so clearly manifest
+					in a working application is a truly rewarding experience.
+					This tangible evolution, from concept to functional mobile
+					app, is what I find particularly captivating about software
+					development.
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					My foundational journey into the tech world began with a
+					"Middle-Grade Vocational Training Cycle" from 2013 to 2015.
+					While the curriculum of this initial course was not directly
+					focused on programming, it was during the mandatory
+					practical work experience within this program that I first
+					encountered and began to explore the world of software
+					development. This initial exposure sparked a significant
+					interest and laid the groundwork for my subsequent pursuit
+					of programming.
+				</div>
+				<div class="content">
+					Following this introductory experience, I enrolled in and
+					completed a "Higher-Grade Vocational Training Cycle in
+					Multiplatform Application Development" from 2015 to 2017.
+					This intensive program provided me with a comprehensive and
+					in-depth education in software development principles,
+					methodologies, and various programming languages, allowing
+					me to fully immerse myself in the field and solidify my
+					skills.
+				</div>
+			</section>
+			<!-- <section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<SkillsChart />
+				</div>
+			</section> -->
+		</main>
 
-      <section>
-        <h2 class="section-title">Languages</h2>
-        <div class="content">
-          <p>Native Spanish</p>
-          <p>English Advanced</p>
-        </div>
-      </section>
-    </main>
-
-    <ContactCTA />
-  </div>
-
-  <style>
-    .about {
-      display: flex;
-      flex-direction: column;
-      gap: 3.5rem;
-    }
-
-    img {
-      margin-top: 1.5rem;
-      border-radius: 1.5rem;
-      box-shadow: var(--shadow-md);
-    }
-
-    section {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      color: var(--gray-200);
-    }
-
-    .section-title {
-      grid-column-start: 1;
-      font-size: var(--text-xl);
-      color: var(--gray-0);
-    }
-
-    .content {
-      grid-column: 2 / 4;
-    }
-
-    .content :global(a) {
-      color: var(--gray-0);
-      display: block;
-      text-decoration: 1px solid underline transparent;
-      text-underline-offset: 0.25em;
-      transition: text-decoration-color var(--theme-transition);
-    }
-
-    .content :global(a:hover),
-    .content :global(a:focus) {
-      text-decoration-color: currentColor;
-    }
-
-    @media (min-width: 50em) {
-      .about {
-        display: grid;
-        grid-template-columns: 1fr 60% 1fr;
-      }
-
-      .about > :global(:first-child) {
-        grid-column-start: 2;
-      }
-
-      section {
-        display: contents;
-        font-size: var(--text-lg);
-      }
-    }
-  </style>
+		<ContactCTA />
+	</div>
 </BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
