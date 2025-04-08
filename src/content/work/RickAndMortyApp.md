@@ -4,16 +4,17 @@ publishDate: 2023-01-01 00:00:00
 img: https://github.com/dherediat97/RickAndMortyApp/raw/main/product_screenshot.png
 description: I found it the perfect optimization in the call requests
 tags:
-  - Design
-  - Dev
-  - User Testing
+  - Android Developing
+  - Good Practices
+  - Clean Code
+  - MVVM
 ---
 
-### Rick and Morty (Android with Jetpack Compose)
+## Rick and Morty (Android with Jetpack Compose)
 
 Rick and Morty is a native Android application built using Jetpack Compose. It allows you to discover characters from the popular animated series "Rick and Morty" and explore their detailed information in a clean and intuitive interface.
 
-### Features
+## Features
 
 * **Browse Characters:** View a scrollable list of characters from the Rick and Morty universe, displaying their name, status, and species, powered by Jetpack Compose.
 * **Character Details:** Tap on a character to navigate to a detailed screen showcasing their image (loaded efficiently with Coil), status, species, gender, origin, last known location, and the episodes they have appeared in, all built with Jetpack Compose.
@@ -22,7 +23,7 @@ Rick and Morty is a native Android application built using Jetpack Compose. It a
 * **Efficient Network Calls with Retrofit:** Data fetching from the Rick and Morty API is handled efficiently using Retrofit, a type-safe HTTP client for Android and Java.
 * **Dependency Injection with Koin:** Koin, a pragmatic lightweight dependency injection framework for Kotlin, manages the application's dependencies, making the codebase more testable and maintainable.
 
-### Technologies Used
+## Technologies Used
 
 * **Kotlin:** The primary programming language for Android development.
 * **Jetpack Compose:** Android's modern declarative UI toolkit for building native Android UIs.
