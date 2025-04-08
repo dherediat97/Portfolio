@@ -15,6 +15,7 @@ import PortfolioPreview from "../components/PortfolioPreview.astro";
 // Page section components
 import ContactCTA from "../components/ContactCTA.astro";
 import Skills from "../components/Skills.astro";
+import Image from "astro/components/Image.astro";
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection("work"))
@@ -30,26 +31,28 @@ const projects = (await getCollection("work"))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is David Heredia"
+					title="David Heredia"
 					tagline="I am a Creative Developer that who is looking for a job and currently living in Córdoba, Spain."
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill
-						>
-						<Pill
-							><Icon icon="microphone-stage" size="1.33em" /> Gamer</Pill
-						>
-						<Pill
-							><Icon icon="pencil-line" size="1.33em" /> Writer</Pill
-						>
+						<Pill>
+							<Icon icon="code" size="1.33em" /> Software Developer
+						</Pill>
+						<Pill>
+							<Icon icon="terminal-window" size="1.33em" /> Geek
+						</Pill>
+						<Pill>
+							<Icon icon="heart" size="1.33em" /> Tecnology Enthusiast
+						</Pill>
 					</div>
 				</Hero>
 
-				<img
+				<Image
+					width={800}
+					height={1024}
 					alt="David Heredia smiling in a grey shirt and brown glasses"
-					width="480"
-					height="620"
+					layout="fixed"
 					src="/assets/portrait.jpg"
 				/>
 			</header>
@@ -90,11 +93,6 @@ const projects = (await getCollection("work"))
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to receive praise for my
-						work in several publications. Take a look below to learn
-						more.
-					</p>
 				</header>
 
 				<div class="gallery">
@@ -130,7 +128,6 @@ const projects = (await getCollection("work"))
 	}
 
 	.hero img {
-		aspect-ratio: 5 / 4;
 		object-fit: cover;
 		object-position: top;
 		border-radius: 1.5rem;

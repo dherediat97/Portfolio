@@ -9,7 +9,7 @@ tags:
   - Clean Code & Clean Architecture
   - TMDB API
 ---
-##  <a href="https://film-flu.web.app/">Film Flu</a>  - Your Ultimate Movie & TV Show Companion
+##  <a href="https://film-flu.web.app/">Film Flu</a> - Your Ultimate Movie & TV Show Companion
  <a href="https://film-flu.web.app/">Film Flu</a> is a Flutter application designed for movie and TV show enthusiasts. It provides a rich and intuitive experience to discover, explore, and manage your favorite entertainment.
 
 ## Features
@@ -28,7 +28,3 @@ tags:
 - Trailer Playback: Watch high-quality trailers directly within the app to get a sneak peek.
 
 - Actor/Crew Details: Dive deeper into the profiles of actors, directors, writers, and other production members, viewing their filmography and biographical information.
-
-- Browse TV Shows (Future Enhancement): [Planned] Explore and discover a variety of television series.
-
-- TV Show Details (Future Enhancement): [Planned] Access detailed information about TV shows, including seasons, episodes, and air dates.

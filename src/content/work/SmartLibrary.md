@@ -9,7 +9,7 @@ tags:
   - ReactJS
   - Vite
 ---
-### <a href="https://smart-library-front.vercel.app/"> SmartLibrary</a> - Your Digital Library (React)
+## <a href="https://smart-library-front.vercel.app/"> SmartLibrary</a> - Your Digital Library (React)
 
 <a href="https://smart-library-front.vercel.app/"> SmartLibrary</a> is a web application built with React, designed for book lovers. Discover new reads, delve into detailed information, explore reviews from fellow readers, and enjoy a seamless browsing experience with infinite scrolling.
 
@@ -19,10 +19,7 @@ tags:
 * **Book Details:** Get in-depth information about each book, including its title, author, publication date, publisher, ISBN, synopsis, and cover image.
 * **Book Reviews:** Read and contribute reviews from other users to help you decide on your next read.
 * **Infinite Scrolling:** Enjoy a continuous browsing experience as more books load automatically as you scroll down the list.
-* **Search Functionality (Future Enhancement):** [Planned] Quickly find specific books by title, author, or ISBN using a search bar.
-* **User Authentication (Future Enhancement):** [Planned] Sign in to save your reading progress, create virtual bookshelves, and manage your read/to-read lists.
-* **Personalized Recommendations (Future Enhancement):** [Planned] Receive book recommendations based on your reading history and preferences.
-* **Genre Filtering & Sorting (Future Enhancement):** [Planned] Filter books by genre and sort them by various criteria (e.g., publication date, rating).
+* **Search Functionality (Future Enhancement):** Quickly find specific books by title, author, or ISBN using a search bar.
 
 ## Technologies Used
 * **React:** A JavaScript library for building user interfaces.
